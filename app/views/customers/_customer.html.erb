@@ -1,0 +1,19 @@
+<div class="column">
+  <div class="card">
+    <div class="card-content">
+      <% if customer.image.present? %>
+        <div class="card-image">
+          <figure class="image is-200x200">
+            <%= image_tag(customer.image, size: "350x250")%>
+          </figure>
+        </div>
+      <% end %>
+      <p class="title">
+        <%= link_to customer.full_name, customer %>
+      </p>
+      <p><%= customer.phone_number %> </p>
+      <br/>
+      <p><%= customer.email_address %> </p>
+    </div>
+  </div>
+</div>

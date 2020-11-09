@@ -1,2 +1,19 @@
-<h1>Customers#show</h1>
-<p>Find me in app/views/customers/show.html.erb</p>
+<h1 class="title is-1"><%= @customer.full_name %></h1>
+
+<div class="card">
+    <div class="card-content">
+      <% if @customer.image.present? %>
+        <div class="card-image">
+          <figure class="image">
+            <%= image_tag @customer.image%>
+          </figure>
+        </div>
+      <% end %>
+      <p class="title">
+        <%= @customer.full_name %>
+      </p>
+      <p><%= @customer.phone_number %> </p>
+      <br/>
+      <p><%= @customer.email_address %> </p>
+    </div>
+  </div>

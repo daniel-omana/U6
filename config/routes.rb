@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :customers, only: %i[index show]
+  get 'customers/index'
+  get 'customers/ordered'
+  get 'customers/missing_email'
+  root to: 'customers#index'
+  resources :customers
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

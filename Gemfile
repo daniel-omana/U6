@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Active Admin
 gem 'activeadmin'
 gem 'devise'
+
+# Image Resizing
+gem 'image_processing'
